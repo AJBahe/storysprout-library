@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'screens/welcome_screen.dart';
 
 void main() {
   runApp(const StorySproutApp());
@@ -11,18 +12,13 @@ class StorySproutApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: Scaffold(
-        backgroundColor: Colors.blue,
-        body: const Center(
-          child: Text(
-            'Hello StorySprout!',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 32,
-            ),
-          ),
-        ),
+      title: 'StorySprout Library',
+      theme: ThemeData(
+        brightness: Brightness.dark,
+        useMaterial3: true,
+        colorSchemeSeed: Colors.green,
       ),
+      home: const WelcomeScreen(),
     );
   }
 }
